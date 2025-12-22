@@ -28,6 +28,12 @@ vim.cmd("set number")
 vim.g.mapleader = " "
 vim.keymap.set('n', '<leader>qq', ':confirm qa<CR>', { desc = "Quit Neovim with confirmation" })
 
+vim.o.breakindent = true
+vim.o.undofile = true
+vim.o.cursorline = true
+vim.o.scrolloff = 10
+
+
 require("lazy").setup({
   spec = {
     -- import your plugins
