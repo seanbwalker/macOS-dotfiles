@@ -20,19 +20,8 @@ vim.opt.rtp:prepend(lazypath)
 -- This is also a good place to setup other settings (vim.opt)
 -- Setup lazy.nvim
 
-vim.cmd("set expandtab")
-vim.cmd("set tabstop=2")
-vim.cmd("set softtabstop=2")
-vim.cmd("set shiftwidth=2")
-vim.cmd("set number")
-vim.g.mapleader = " "
-vim.keymap.set('n', '<leader>qq', ':confirm qa<CR>', { desc = "Quit Neovim with confirmation" })
-
-vim.o.breakindent = true
-vim.o.undofile = true
-vim.o.cursorline = true
-vim.o.scrolloff = 10
-
+require("config.options")
+require("config.keymaps")
 
 require("lazy").setup({
   spec = {
@@ -45,3 +34,4 @@ require("lazy").setup({
   -- automatically check for plugin updates
   checker = { enabled = true },
 })
+

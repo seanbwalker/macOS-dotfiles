@@ -8,4 +8,3 @@ return
     vim.keymap.set ( "n", "<leader>fg", "<cmd>FzfLua live_grep<CR>", {} )
   end,
 }
-

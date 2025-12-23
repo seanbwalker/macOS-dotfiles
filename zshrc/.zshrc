@@ -1,8 +1,4 @@
 alias ff='fastfetch'
-
-# Star Ship
+source <(fzf --zsh)
 eval "$(starship init zsh)"
 
-
-# Set up fzf key bindings and fuzzy completion
-source <(fzf --zsh)
