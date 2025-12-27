@@ -19,11 +19,14 @@ return {
 
     -- Set menu
     dashboard.section.buttons.val = {
-      dashboard.button("e", "  > New File", "<cmd>ene<CR>"),
-      dashboard.button("SPC ee", "  > Toggle file explorer", "<cmd>NvimTreeToggle<CR>"),
-      dashboard.button("SPC ff", "󰱼 > Find File", "<cmd>Telescope find_files<CR>"),
-      dashboard.button("SPC fs", "  > Find Word", "<cmd>Telescope live_grep<CR>"),
-      dashboard.button("SPC wr", "󰁯  > Restore Session For Current Directory", "<cmd>SessionRestore<CR>"),
+      dashboard.button("e", " > New File", "<cmd>ene<CR>"),
+      dashboard.button("SPC fe", " > Toggle file explorer", "<cmd>Neotree filesystem reveal left<CR>"),
+      dashboard.button("SPC ff", "󰱼 > Find File", "<cmd>FzfLua files<CR>"),
+      dashboard.button("SPC fg", " > Find Word", "<cmd>FzfLua live_grep<CR>"),
+      dashboard.button("d", "󱁿  Dotfiles", function()
+        vim.cmd("cd ~/.dotfiles")
+        vim.cmd("FzfLua files")
+      end),
       dashboard.button("q", " > Quit NVIM", "<cmd>qa<CR>"),
     }
 
