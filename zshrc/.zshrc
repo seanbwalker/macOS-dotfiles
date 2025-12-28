@@ -6,8 +6,8 @@ if [[ -r "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh" ]]
 fi
 
 alias ff='fastfetch'
+alias lg='lazygit'
 source <(fzf --zsh)
-eval "$(starship init zsh)"
 
 source /opt/homebrew/share/powerlevel10k/powerlevel10k.zsh-theme
 
