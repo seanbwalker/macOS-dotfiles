@@ -1,5 +1,7 @@
 local opt = vim.opt
 
+vim.o.termguicolors = false
+
 opt.number = true
 
 opt.tabstop = 2
